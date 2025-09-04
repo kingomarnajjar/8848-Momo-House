@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8848 Momo House - Food Safety Audit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .container {
+            max-width: 900px;
+        }
+        .audit-card {
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .section-header {
+            background-color: #1a202c;
+            color: #fff;
+            padding: 1.5rem;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .subsection-header {
+            background-color: #f7fafc;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 1.125rem;
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .table-header th {
+            background-color: #4a5568;
+            color: #fff;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 500;
+        }
+        .table-row td {
+            padding: 0.75rem 1rem;
+            vertical-align: top;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .checkbox-container {
+            display: inline-block;
+            vertical-align: top;
+            padding-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="container mx-auto">
+        <div class="audit-card bg-white">
+            <header class="bg-gray-800 text-white p-6 rounded-t-xl">
+                <h1 class="text-3xl font-bold text-center">8848 Momo House</h1>
+                <h2 class="text-xl text-center">Food Safety Audit Report</h2>
+            </header>
+
+            <div class="p-6 space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div><label class="font-semibold">Date of Audit:</label> <input type="date" class="border p-2 rounded-lg w-full mt-1"></div>
+                    <div><label class="font-semibold">Store Location:</label> <input type="text" class="border p-2 rounded-lg w-full mt-1"></div>
+                    <div><label class="font-semibold">Audit Performed By:</label> <input type="text" class="border p-2 rounded-lg w-full mt-1"></div>
+                    <div><label class="font-semibold">Previous Audit Score:</label>
+                        <select class="border p-2 rounded-lg w-full mt-1">
+                            <option>5 Stars</option>
+                            <option>4 Stars</option>
+                            <option>3 Stars</option>
+                            <option>2 Stars</option>
+                            <option>0 Stars</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-header">Section 1: Business Details (Chapter 1)</h3>
+                    <div class="bg-gray-50 p-6 rounded-b-xl">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div><label class="font-semibold">Business Trading Name:</label> <input type="text" class="border p-2 rounded-lg w-full mt-1"></div>
+                            <div><label class="font-semibold">Food Licence Number:</label> <input type="text" class="border p-2 rounded-lg w-full mt-1"></div>
+                            <div><label class="font-semibold">Licensee Name:</label> <input type="text" class="border p-2 rounded-lg w-full mt-1"></div>
+                            <div><label class="font-semibold">Business Trading Address:</label> <input type="text" class="border p-2 rounded-lg w-full mt-1"></div>
+                            <div><label class="font-semibold">Contact Details:</label> <input type="text" placeholder="Phone Number, Email" class="border p-2 rounded-lg w-full mt-1"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-header">Section 2: Compliance Details (Chapter 3)</h3>
+                    <div class="bg-gray-50 p-6 rounded-b-xl">
+                        <div class="mb-6">
+                            <h4 class="subsection-header">Division 2 - General Requirements</h4>
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead>
+                                        <tr class="table-header">
+                                            <th class="w-1/12">Ref.</th>
+                                            <th class="w-4/12">Aspect & Control Measure</th>
+                                            <th class="w-2/12">Compliant</th>
+                                            <th class="w-5/12">Comments / Findings</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-row">
+                                            <td>G1</td>
+                                            <td>**Licence & Display:** Is the current food business license issued by the Council and is it displayed? (Food Act 2006, s49 & s69)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>G2</td>
+                                            <td>**Licence Conditions:** Is the business complying with any site-specific conditions? (Food Act 2006, s51)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>G3</td>
+                                            <td>**Design & Structure:** Do the premises comply with the structural requirements of the Food Safety Standards? (Standard 3.2.3)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="subsection-header">Division 3 - Food Handling Controls</h4>
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead>
+                                        <tr class="table-header">
+                                            <th class="w-1/12">Ref.</th>
+                                            <th class="w-4/12">Aspect & Control Measure</th>
+                                            <th class="w-2/12">Compliant</th>
+                                            <th class="w-5/12">Comments / Findings</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-row">
+                                            <td>H1</td>
+                                            <td>**Food Receipt:** Is food protected from contamination upon receipt? Are potentially hazardous foods (PHF) received at the correct temperature (<5°C or >60°C)? (Standard 3.2.2, Cl. 5)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>H2</td>
+                                            <td>**Food Storage:** Is food stored safely to prevent contamination? Are PHFs stored under correct temperature control? (Standard 3.2.2, Cl. 6)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>H3</td>
+                                            <td>**Food Processing:** Are measures in place to prevent contamination and ensure safe food? Is time minimized for PHFs held outside temperature control? (Standard 3.2.2, Cl. 7)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>H4</td>
+                                            <td>**Cooling:** Are cooked PHFs cooled from 60°C to 21°C within 2 hours, and to 5°C within a further 4 hours? (Standard 3.2.2, Cl. 7)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>H5</td>
+                                            <td>**Reheating:** Are appropriate procedures followed for reheating previously cooked and cooled PHFs? (Standard 3.2.2, Cl. 7)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>H6</td>
+                                            <td>**Food Display:** Is food protected from contamination on display? Are PHFs displayed under correct temperature control? (Standard 3.2.2, Cl. 8)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>H7</td>
+                                            <td>**Food for Disposal:** Are there proper arrangements for food that needs disposal? (Standard 3.2.2, Cl. 11)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>H8</td>
+                                            <td>**Food Recall:** If applicable, does the business have a documented food recall system? (Standard 3.2.2, Cl. 12)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="subsection-header">Division 4 - Health and Hygiene Requirements</h4>
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead>
+                                        <tr class="table-header">
+                                            <th class="w-1/12">Ref.</th>
+                                            <th class="w-4/12">Aspect & Control Measure</th>
+                                            <th class="w-2/12">Compliant</th>
+                                            <th class="w-5/12">Comments / Findings</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-row">
+                                            <td>H9</td>
+                                            <td>**Contact with Food:** Are food handlers minimizing the risk of contamination? (Standard 3.2.2, Cl. 13 & 15)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>H10</td>
+                                            <td>**Health of Food Handlers:** Are actions taken to ensure staff do not handle food if they have a foodborne illness or other relevant condition? (Standard 3.2.2, Cl. 14 & 16)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>H11</td>
+                                            <td>**Hand Washing:** Are adequate hand washing facilities available and used correctly? (Standard 3.2.2, Cl. 17)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="subsection-header">Division 5 - Cleaning, Sanitising, and Maintenance</h4>
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead>
+                                        <tr class="table-header">
+                                            <th class="w-1/12">Ref.</th>
+                                            <th class="w-4/12">Aspect & Control Measure</th>
+                                            <th class="w-2/12">Compliant</th>
+                                            <th class="w-5/12">Comments / Findings</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-row">
+                                            <td>C1</td>
+                                            <td>**Cleanliness:** Are the premises, fixtures, fittings, and equipment maintained in a clean condition? (Standard 3.2.2, Cl. 19)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>C2</td>
+                                            <td>**Sanitation:** Is equipment and food contact surfaces maintained in a sanitary condition? (Standard 3.2.2, Cl. 20)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>C3</td>
+                                            <td>**Maintenance:** Are premises, fixtures, fittings, and equipment maintained in good repair? (Standard 3.2.2, Cl. 21)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>C4</td>
+                                            <td>**Pests:** Are practicable measures taken to prevent pests from entering and harbouring on the premises? (Standard 3.2.2, Cl. 24)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-header">Section 3: New Requirements (June 2025 Food Standards Code)</h3>
+                    <div class="bg-gray-50 p-6 rounded-b-xl">
+                        <div class="mb-6">
+                            <h4 class="subsection-header">Standard 3.2.2A - Food Safety Management Tools</h4>
+                            <p class="mb-4 text-sm text-gray-600">This section is for verifying new requirements for food safety training, supervision, and record-keeping for businesses that handle unpackaged potentially hazardous foods.</p>
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead>
+                                        <tr class="table-header">
+                                            <th class="w-1/12">Ref.</th>
+                                            <th class="w-4/12">Aspect & Control Measure</th>
+                                            <th class="w-2/12">Compliant</th>
+                                            <th class="w-5/12">Comments / Findings</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-row">
+                                            <td>N1</td>
+                                            <td>**Food Safety Training:** Are all food handlers for prescribed activities trained in food safety? (Standard 3.2.2A, Cl. 10)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>N2</td>
+                                            <td>**Supervision:** Has a Food Safety Supervisor been appointed and is they available to advise and supervise? (Standard 3.2.2A, Cl. 11)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>N3</td>
+                                            <td>**Record Keeping:** Are records kept to substantiate compliance with temperature controls (receipt, storage, processing, display)? (Standard 3.2.2A, Cl. 12)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="subsection-header">Standard 1.2.3 - Mandatory Declarations</h4>
+                            <p class="mb-4 text-sm text-gray-600">This section is for verifying allergen declarations meet the new formatting requirements.</p>
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead>
+                                        <tr class="table-header">
+                                            <th class="w-1/12">Ref.</th>
+                                            <th class="w-4/12">Aspect & Control Measure</th>
+                                            <th class="w-2/12">Compliant</th>
+                                            <th class="w-5/12">Comments / Findings</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-row">
+                                            <td>N4</td>
+                                            <td>**Allergen Declaration:** Are mandatory allergens listed in the statement of ingredients using bold font and distinctly separated from other text? (Standard 1.2.3, Cl. 7)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                        <tr class="table-row">
+                                            <td>N5</td>
+                                            <td>**Summary Statement:** Is there a summary statement of allergens on the label, separated from the ingredients list? (Standard 1.2.3, Cl. 6)</td>
+                                            <td><div class="checkbox-container"><input type="checkbox"> Yes</div><div class="checkbox-container"><input type="checkbox"> No</div><div class="checkbox-container"><input type="checkbox"> N/A</div></td>
+                                            <td><input type="text" class="border p-2 rounded-lg w-full"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-header">Action Plan & Sign-Off</h3>
+                    <div class="bg-gray-50 p-6 rounded-b-xl">
+                        <p class="text-sm font-bold mb-2">Instructions for addressing non-compliance:</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 mb-6">
+                            <li>**Minor Non-Compliance:** To be addressed within 14 days.</li>
+                            <li>**Major Non-Compliance:** To be addressed within 7 days.</li>
+                            <li>**Critical Non-Compliance:** To be addressed immediately.</li>
+                        </ul>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Final Sign-Off</h4>
+                                <div class="space-y-4">
+                                    <div><label class="font-semibold">Internal Auditor Name:</label> <input type="text" class="border p-2 rounded-lg w-full mt-1"></div>
+                                    <div><label class="font-semibold">Signature:</label> <input type="text" class="border p-2 rounded-lg w-full mt-1"></div>
+                                    <div><label class="font-semibold">Date:</label> <input type="date" class="border p-2 rounded-lg w-full mt-1"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Manager's Acknowledgement</h4>
+                                <div class="space-y-4">
+                                    <div><label class="font-semibold">Store Manager Name:</label> <input type="text" class="border p-2 rounded-lg w-full mt-1"></div>
+                                    <div><label class="font-semibold">Signature:</label> <input type="text" class="border p-2 rounded-lg w-full mt-1"></div>
+                                    <div><label class="font-semibold">Date:</label> <input type="date" class="border p-2 rounded-lg w-full mt-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
